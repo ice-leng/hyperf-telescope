@@ -16,7 +16,7 @@ use Hyperf\Database\Schema\Schema;
 use Hyperf\HttpServer\MiddlewareManager;
 use Hyperf\HttpServer\Router\Dispatched;
 use Hyperf\Rpc\Context as RpcContext;
-use Hyperf\Utils\Context;
+use Hyperf\Context\Context;
 use Hyperf\Utils\Coordinator\Constants;
 use Hyperf\Utils\Coordinator\CoordinatorManager;
 use Psr\EventDispatcher\EventDispatcherInterface;

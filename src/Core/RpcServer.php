@@ -12,7 +12,8 @@ declare(strict_types=1);
 namespace Wind\Telescope\Core;
 
 use Hyperf\ExceptionHandler\ExceptionHandlerDispatcher;
-use Hyperf\Utils\Context;
+use Hyperf\Context\Context;
+use Hyperf\JsonRpc\TcpServer;
 use Hyperf\Utils\Coordinator\Constants;
 use Hyperf\Utils\Coordinator\CoordinatorManager;
 use Psr\EventDispatcher\EventDispatcherInterface;
@@ -22,7 +23,7 @@ use Throwable;
 use Wind\Telescope\Event\RpcHandled;
 use Wind\Telescope\Str;
 
-class RpcServer extends \Hyperf\JsonRpc\TcpServer
+class RpcServer extends TcpServer
 {
     public function onReceive($server, int $fd, int $fromId, string $data): void
     {

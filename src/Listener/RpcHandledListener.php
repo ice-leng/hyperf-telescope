@@ -17,7 +17,7 @@ use Hyperf\Event\Contract\ListenerInterface;
 use Hyperf\HttpMessage\Server\Request;
 use Hyperf\HttpServer\Router\Dispatched;
 use Hyperf\Utils\Arr;
-use Hyperf\Utils\Context;
+use Hyperf\Context\Context;
 use Psr\Http\Message\ResponseInterface;
 use Wind\Telescope\EntryType;
 use Wind\Telescope\Event\RpcHandled;

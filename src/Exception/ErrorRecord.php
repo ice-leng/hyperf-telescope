@@ -13,7 +13,7 @@ namespace Wind\Telescope\Exception;
 
 use Hyperf\ExceptionHandler\ExceptionHandler;
 use Hyperf\HttpMessage\Stream\SwooleStream;
-use Hyperf\Utils\Context;
+use Hyperf\Context\Context;
 use Psr\Http\Message\ResponseInterface;
 use Throwable;
 

@@ -15,7 +15,7 @@ use Hyperf\Database\Events\QueryExecuted;
 use Hyperf\Event\Annotation\Listener;
 use Hyperf\Event\Contract\ListenerInterface;
 use Hyperf\Utils\Arr;
-use Hyperf\Utils\Context;
+use Hyperf\Context\Context;
 use Hyperf\Utils\Str;
 
 /**
