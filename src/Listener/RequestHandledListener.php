@@ -14,6 +14,7 @@ namespace Wind\Telescope\Listener;
 use Hyperf\Database\Events\QueryExecuted;
 use Hyperf\Event\Annotation\Listener;
 use Hyperf\Event\Contract\ListenerInterface;
+use Hyperf\HttpMessage\Server\Request;
 use Hyperf\HttpServer\Router\Dispatched;
 use Hyperf\Utils\Arr;
 use Hyperf\Utils\Context;
@@ -37,11 +38,11 @@ class RequestHandledListener implements ListenerInterface
     /**
      * @param QueryExecuted $event
      */
-    public function process(object $event)
+    public function process(object $event): void
     {
         if ($event instanceof RequestHandled) {
             /**
-             * @var \Hyperf\HttpMessage\Server\Request $psr7Request
+             * @var Request $psr7Request
              */
             $psr7Request = $event->request;
             $psr7Response = $event->response;
